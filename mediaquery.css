@@ -56,6 +56,10 @@
     height: 83vh;
     margin-bottom: 0;
   }
+      section,
+  .section-container {
+    height: fit-content;
+  }
   article {
     font-size: 1rem;
   }
@@ -100,4 +104,5 @@
   .text-container {
     text-align: justify;
   }
+
 }
