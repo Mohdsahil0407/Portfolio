@@ -10,15 +10,15 @@
 .title{
   font-size: 48px;
   font-weight: bold;
-  background:linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 .logo{
     margin-top: 2rem;
 }
 body {
   font-family: "Poppins", sans-serif;
+   background:linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+  /* -webkit-background-clip: text; */
+  /* -webkit-text-fill-color: transparent; */
 }
 
 html {
@@ -26,7 +26,7 @@ html {
 }
 
 p {
-  color: rgb(85, 85, 85);
+  color: rgb(11, 29, 85);
 }
 
 /* TRANSITION */
@@ -37,7 +37,10 @@ a,
 }
 
 /* DESKTOP NAV */
-
+#desktop-nav img{
+  mix-blend-mode:multiply;
+  background-color:none /* or any background you want to blend into */
+}
 nav,
 .nav-links {
   display: flex;
@@ -174,6 +177,7 @@ section {
   justify-content: center;
   gap: 5rem;
   height: 80vh;
+
 }
 
 .section__pic-container {
@@ -234,16 +238,27 @@ section {
   padding: 1rem;
   width: 8rem;
   border-radius: 2rem;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);        /* semi-transparent */
+  backdrop-filter: blur(12px);                 /* adds the blur */
+  -webkit-backdrop-filter: blur(12px); 
 }
-
-.btn-color-1,
-.btn-color-2 {
-  border: rgb(53, 53, 53) 0.1rem solid;
+.btn-cv{
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);        /* semi-transparent */
+  backdrop-filter: blur(12px);                 /* adds the blur */
+  -webkit-backdrop-filter: blur(12px);
+  cursor: pointer;
 }
-
 .btn-color-1:hover,
 .btn-color-2:hover {
   cursor: pointer;
+  border: none;
 }
 
 .btn-color-1,
@@ -258,10 +273,6 @@ section {
 
 .btn-color-2 {
   background: none;
-}
-
-.btn-color-2:hover {
-  border: rgb(255, 255, 255) 0.1rem solid;
 }
 
 .btn-container {
@@ -283,7 +294,7 @@ section {
 .about-details-container {
   justify-content: center;
   flex-direction: column;
-}
+ }
 
 .about-containers,
 .about-details-container {
@@ -303,11 +314,12 @@ section {
 .details-container {
   padding: 1.5rem;
   flex: 1;
-  background: white;
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  text-align: center;
+  background: rgba(255, 255, 255, 0.1);        /* semi-transparent */
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(237, 237, 246, 0.1);
+  backdrop-filter: blur(12px);                 /* adds the blur */
+  -webkit-backdrop-filter: blur(12px);         /* Safari support */
 }
 
 .section-container {
@@ -369,7 +381,10 @@ article .icon {
 .color-container {
   border-color: rgb(163, 163, 163);
   background: rgb(250, 250, 250);
-}
+  background: rgba(255, 255, 255, 0.1); /* transparent */
+  backdrop-filter: blur(10px);         /* this creates the blur */
+  webkit-backdrop-filter: blur(10px); /* for Safari support */
+  }
 
 .project-img {
   border-radius: 2rem;
@@ -382,10 +397,10 @@ article .icon {
   color: black;
 }
 
-.project-btn {
+/* .project-btn {
   color: black;
   border-color: rgb(163, 163, 163);
-}
+} */
 
 /* CONTACT */
 
@@ -440,7 +455,7 @@ footer p {
 .section__text h1{
   font-size: 48px;
   font-weight: bold;
-  background:linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+ background-image: linear-gradient(45deg, #874da2 0%, #c43a30 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
