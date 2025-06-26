@@ -18,10 +18,17 @@
   }
   #hamburger-nav {
     display: flex;
+    
+  }
+  .logo img{
+    height: 100px;
   }
   #experience,
   .experience-details-container {
     margin-top: 2rem;
+  }
+  #profile{
+    height:fit-content;
   }
   #profile,
   .section-container {
@@ -45,6 +52,11 @@
   .about-containers {
     margin-top: 0;
   }
+  .section__text .title{
+    margin-top: 2rem;
+    padding-left: 2rem;
+
+  } 
 }
 
 @media screen and (max-width: 600px) {
@@ -53,7 +65,7 @@
     height: 40vh;
   }
   #profile {
-    height: 83vh;
+    height: 20vh;
     margin-bottom: 0;
   }
       section,

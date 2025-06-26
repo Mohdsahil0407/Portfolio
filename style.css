@@ -7,7 +7,16 @@
   margin: 0;
   padding: 0;
 }
-
+.title{
+  font-size: 48px;
+  font-weight: bold;
+  background:linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.logo{
+    margin-top: 2rem;
+}
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -57,10 +66,6 @@ a:hover {
   text-decoration: underline;
   text-underline-offset: 1rem;
   text-decoration-color: rgb(181, 181, 181);
-}
-
-.logo {
-  font-size: 2rem;
 }
 
 .logo:hover {
@@ -159,6 +164,7 @@ section {
 
 .section-container {
   display: flex;
+  
 }
 
 /* PROFILE SECTION */
@@ -430,4 +436,32 @@ footer {
 
 footer p {
   text-align: center;
+}
+.section__text h1{
+  font-size: 48px;
+  font-weight: bold;
+  background:linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* Style for the typed text container */
+.section__text__p2 {
+  font-family: monospace;
+  font-size: 24px;
+  white-space: nowrap;
+  display: inline-block;
+  overflow: hidden;
+  border-right: 2px solid #00ffff; /* Simulates the cursor */
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+/* Make the built-in cursor invisible */
+.typed-cursor {
+  display: none;
+}
+
+/* Simulated cursor blink */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color:  rgb(53, 53, 53) }
 }

@@ -4,10 +4,11 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaquery.css" />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   </head>
   <body>
     <nav id="desktop-nav">
-      <div class="logo">Mohd Sahil</div>
+      <div class="logo"><img src="./asset/logo.png" height="100px"></div>
       <div>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
@@ -18,7 +19,7 @@
       </div>
     </nav>
     <nav id="hamburger-nav">
-      <div class="logo">Mohd Sahil</div>
+      <div class="logo"><img src="./asset/logo.png"></div>
       <div class="hamburger-menu">
         <div class="hamburger-icon" onclick="toggleMenu()">
           <span></span>
@@ -35,12 +36,12 @@
     </nav>
     <section id="profile">
       <div class="section__pic-container">
-        <img src="./asset/profile-pic.png" alt="Mohd Sahil profile picture" />
+        <img src="./asset/profile-pic.png" alt="Mohd Sahil profile picture" height="350px" />
       </div>
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Mohd Sahil</h1>
-        <p class="section__text__p2">Frontend Developer</p>
+        <p class="section__text__p2"></p>
         <div class="btn-container">
        <a href="./asset/Sahil.BCA.Resume.pdf" target="_blank">
        <button class="btn btn-color-2">View CV</button>
@@ -71,7 +72,7 @@
       <div class="section-container">
         <div class="section__pic-container">
           <img
-            src="./asset/about-pic.png"
+            src="./asset/about-pic.png" height="300px"
             alt="Profile picture"
             class="about-pic"
           />
@@ -80,7 +81,7 @@
           <div class="about-containers">
             <div class="details-container">
               <img
-                src="./asset/experience.png"
+                src="./asset/experience.jpg"
                 alt="Experience icon"
                 class="icon"
               />
@@ -371,5 +372,6 @@
       <p>Copyright &#169; 2024 Mohd Sahil. All Rights Reserved.</p>
     </footer>
     <script src="script.js"></script>
+    
   </body>
 </html>
