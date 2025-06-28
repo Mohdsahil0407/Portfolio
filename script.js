@@ -11,3 +11,18 @@ function toggleMenu() {
     backDelay: 1500,
     loop: true
   });
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target); // Animate only once
+      }
+    });
+  }, {
+    threshold: .7 // 60% of the card should be visible (centered)
+  });
+
+  document.querySelectorAll('.details-container,.section__pic-container').forEach(card => {
+    observer.observe(card);
+  });
+
