@@ -17,16 +17,81 @@
 body {
   font-family: "Poppins", sans-serif;
    background:linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
-  /* -webkit-background-clip: text; */
-  /* -webkit-text-fill-color: transparent; */
+     scrollbar-width: none;       /* Firefox */
+  -ms-overflow-style: none;    /* IE and Edge */
+  overflow-y: scroll;          /* Enable scroll */
+}
+/* For Chrome, Edge, and Safari */
+body::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
 }
 
+/* Optional: Also apply to html if needed */
+html::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
 html {
-  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow-y: scroll;
 }
 
-p {
-  color: rgb(11, 29, 85);
+
+:root {
+  --bg-color:linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+  --text-color: #000;
+  --card-bg: #fff;
+  --accent-color: #007bff;
+}
+
+body.dark-mode {
+  --bg-color:linear-gradient(15deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+  --text-color: #ffffff;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --accent-color: #00f7ff;
+}
+
+/* Use the variables in your design */
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: 0.3s ease;
+}
+
+.card {
+  background: var(--card-bg);
+  color: var(--text-color);
+  box-shadow: 0 0 15px var(--accent-color);
+}
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(45deg, #874da2 0%, #c43a30 100%);
+  width: 0%;
+  z-index: 9999;
+  transition: width 0.25s ease-out;
+  box-shadow: 0 0 50px red;
+  border-radius: 5px;
+}
+
+
+
+
+/* Toggle button */
+.theme-btn {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  background: transparent;
+  border: none;
+  color: var(--accent-color);
+  cursor: pointer;
 }
 
 /* TRANSITION */
@@ -343,12 +408,12 @@ section {
   padding: 1.5rem;
   flex: 1;
   border-radius: 2rem;
-  background: rgba(255, 255, 255, 0.1);        /* semi-transparent */
+  background: rgba(255, 255, 255, 0.1);      
   border-radius: 20px;
   box-shadow: 0 8px 32px 0 rgba(237, 237, 246, 0.1);
   backdrop-filter: blur(12px);                 /* adds the blur */
-  -webkit-backdrop-filter: blur(12px);         /* Safari support */
-}
+  -webkit-backdrop-filter: blur(12px);        
+  }
 .details-container,.section__pic-container {
   opacity: 0;
   transform: translateY(100px);

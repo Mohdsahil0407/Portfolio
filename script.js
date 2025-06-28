@@ -26,3 +26,40 @@ function toggleMenu() {
     observer.observe(card);
   });
 
+ const toggleBtn = document.getElementById("theme-toggle");
+const icon = toggleBtn.querySelector("i");
+const body = document.body;
+
+toggleBtn.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+
+  if (body.classList.contains("dark-mode")) {
+    icon.classList.remove("fa-moon");
+    icon.classList.add("fa-sun");
+  } else {
+    icon.classList.remove("fa-sun");
+    icon.classList.add("fa-moon");
+  }
+
+  localStorage.setItem("theme", body.classList.contains("dark-mode") ? "dark" : "light");
+});
+
+// Load saved theme
+window.addEventListener("load", () => {
+  const savedTheme = localStorage.getItem("theme");
+
+  if (savedTheme === "dark") {
+    body.classList.add("dark-mode");
+    icon.classList.remove("fa-moon");
+    icon.classList.add("fa-sun");
+  }
+});
+  window.addEventListener("scroll", () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    document.getElementById("scroll-progress").style.width = scrollPercent + "%";
+  });
+
+
+
