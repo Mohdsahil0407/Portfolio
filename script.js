@@ -54,12 +54,14 @@ window.addEventListener("load", () => {
     icon.classList.add("fa-sun");
   }
 });
-  window.addEventListener("scroll", () => {
-    const scrollTop = window.scrollY;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const scrollPercent = (scrollTop / docHeight) * 100;
-    document.getElementById("scroll-progress").style.width = scrollPercent + "%";
-  });
+window.addEventListener("scroll", () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const scrollPercent = (scrollTop / docHeight) * 100;
+  document.getElementById("scroll-progress").style.width = scrollPercent + "%";
+});
+
+
 
 
 
