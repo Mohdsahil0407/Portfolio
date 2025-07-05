@@ -38,7 +38,7 @@ html {
 
 
 :root {
-  --bg-color:linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+  --bg-color:linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
   --text-color: #000;
   --card-bg: #fff;
   --accent-color: #007bff;
@@ -49,6 +49,7 @@ body.dark-mode {
   --text-color: #ffffff;
   --card-bg: rgba(255, 255, 255, 0.05);
   --accent-color: #00f7ff;
+  
 }
 
 /* Use the variables in your design */
@@ -315,7 +316,7 @@ section {
   width: 8rem;
   border-radius: 2rem;
   border: none;
-  background: rgba(255, 255, 255, 0.2);        /* semi-transparent */
+  background: rgba(110, 109, 109, 0.2);        /* semi-transparent */
   backdrop-filter: blur(12px);                 /* adds the blur */
   -webkit-backdrop-filter: blur(12px); 
 }
@@ -376,7 +377,7 @@ section {
 }
 
 .btn-color-2 {
-  background: none;
+  border: 1px solid grey;
 }
 
 .btn-container {
@@ -522,6 +523,9 @@ article .icon {
   flex-direction: column;
   height: 70vh;
 }
+#contact a{
+  text-decoration: none;
+}
 .contact-info-container {
   display: flex;
   align-items: center;
@@ -551,7 +555,7 @@ article .icon {
   right: -4px;
   bottom: -4px;
   border-radius: 2.5rem;
-  background: linear-gradient(45deg, #00f, #0ff, #00f);
+  background: linear-gradient(45deg, rgb(1, 1, 248), #0ff, rgb(182, 182, 232));
   background-size: 400%;
   filter: blur(10px);
   opacity: 0.8;
