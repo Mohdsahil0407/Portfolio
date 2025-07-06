@@ -103,6 +103,10 @@ a,
   mix-blend-mode:multiply;
   background-color:none /* or any background you want to blend into */
 }
+#desktop-nav {
+  display: flex;
+  justify-items: ;
+}
 nav,
 .nav-links {
   display: flex;
@@ -420,7 +424,7 @@ section {
   padding: 1.5rem;
   flex: 1;
   border-radius: 2rem;
-  background: rgba(255, 255, 255, 0.1);      
+  background: rgba(238, 5, 5, );      
   border-radius: 20px;
   box-shadow: 0 8px 32px 0 rgba(237, 237, 246, 0.1);
   backdrop-filter: blur(12px);                 /* adds the blur */
