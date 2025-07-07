@@ -1,3 +1,10 @@
+@media screen and (min-width:1024px){
+  .logo img{
+    margin-right: 15rem;
+  }
+}
+
+
 @media screen and (max-width: 1400px) {
   #profile {
     height: 83vh;
@@ -22,6 +29,7 @@
   }
   .logo img{
     height: 120px;
+    margin-left: 5rem;
    }
   #experience,
   .experience-details-container {
@@ -31,6 +39,9 @@
     height:fit-content;
     margin-bottom: 0;
     padding-top: 0;
+  }
+  #profile img{
+    margin-left: 1.2rem;
   }
   #profile,
   .section-container {
@@ -56,6 +67,7 @@
   }
   .about-containers {
     margin-top: 3rem;
+   
   }
 }
 
@@ -96,7 +108,7 @@
   }
   .logo {
     font-size: 1.5rem;
-    margin-left: 5rem;
+   
   }
   .nav-links {
     flex-direction: column;
