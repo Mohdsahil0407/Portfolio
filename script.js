@@ -1,9 +1,22 @@
-function toggleMenu() {
-  const menu = document.querySelector(".menu-links");
-  const icon = document.querySelector(".hamburger-icon");
-  menu.classList.toggle("open");
-  icon.classList.toggle("open");
-}
+
+  const menu = document.querySelector('.menu-links');
+  const hamburger = document.querySelector('.hamburger-icon');
+
+  function toggleMenu() {
+    menu.classList.toggle("open");
+    hamburger.classList.toggle("open");
+  }
+
+  // Close menu if click happens outside
+  document.addEventListener('click', function (event) {
+    const isClickInside = menu.contains(event.target) || hamburger.contains(event.target);
+    if (!isClickInside) {
+      menu.classList.remove("open");
+      hamburger.classList.remove("open");
+    }
+  });
+
+
   new Typed(".typed", {
     strings: ["Front-End Developer","Backend-End Developer","Full Stack Developer"],
     typeSpeed: 150,
@@ -60,6 +73,9 @@ window.addEventListener("scroll", () => {
   const scrollPercent = (scrollTop / docHeight) * 100;
   document.getElementById("scroll-progress").style.width = scrollPercent + "%";
 });
+
+
+
 
 
 

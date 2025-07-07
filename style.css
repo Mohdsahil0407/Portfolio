@@ -183,32 +183,22 @@ a:hover:before {
 }
 
 .menu-links {
+  display: none;
   position: absolute;
+  border: 1px solid grey;
   border-radius: 2rem;
   top: 100%;
   right: 0;
-  background: rgba(255, 255, 255, 0.1);  /* Transparent white */
-  border-radius: 15px;
-  padding: 20px;
-  color: white;
-
-  /* Glass blur effect */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);  /* Safari support */
-
-  /* Optional border */
-  border: 1px solid rgba(255, 255, 255, 0.2);
-
-  /* Optional shadow */
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-
+  background-color: white;
   width: 20rem;
   height:30rem;
   overflow: hidden;
   transition: all 0.3 ease-in-out;
   z-index: 1;
 }
-
+.menu-links.open{
+  display: block;
+}
 .menu-links a {
   display: block;
   padding:20px 40px;
