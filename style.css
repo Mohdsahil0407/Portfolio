@@ -602,7 +602,7 @@ article .icon {
 /* FOOTER SECTION */
 
 footer {
-  height: 15vh;
+  height: 20vh;
   margin: 0 1rem;
 }
 
@@ -636,4 +636,11 @@ footer p {
 @keyframes blink-caret {
   from, to { border-color: transparent; }
   50% { border-color:  rgb(53, 53, 53) }
+}
+.extra {
+  display: flex;
+  flex-direction: column;        /* Stack items vertically */
+  align-items: center;           /* Center items horizontally */
+  justify-content: center;       /* Optional: center vertically if height is fixed */
+  text-align: center;            /* Optional: center text inside the <p> */
 }

@@ -73,7 +73,15 @@ window.addEventListener("scroll", () => {
   const scrollPercent = (scrollTop / docHeight) * 100;
   document.getElementById("scroll-progress").style.width = scrollPercent + "%";
 });
+//modification of document last time
+  const lastModified = new Date(document.lastModified);
+  const options = {
+    year: 'numeric', month: 'short', day: 'numeric',
+    hour: '2-digit', minute: '2-digit'
+  };
 
+  document.getElementById("last-updated").textContent =
+    "Last updated: " + lastModified.toLocaleDateString("en-US", options);
 
 
 
